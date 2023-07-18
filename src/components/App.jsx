@@ -24,7 +24,7 @@ export class App extends Component {
     this.state.contacts.find(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
     )
-      ? alert('Такий контакт вже існує')
+      ? alert(`${data.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [data, ...prevState.contacts],
         }));
